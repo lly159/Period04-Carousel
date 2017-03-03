@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/Carousel.css">
+	<script type="text/javascript"  src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript"  src="js/Carousel.js"></script>
+
+</head>
+<body>
+	<div class="J_picture-container picture-container" data-setting='{    
+	"width":1000,
+			"heght":500,
+			"picturewidth":800,
+			"pictureheight":500,
+			"type":"mid",
+			"speed":500,
+			"percent":0.9
+	}'><!-- J_picture-container为用js操作的类名，data-setting为给旋转木马配置的参数(其中type为对齐方式，persent为过渡的百分比)
+ -->		<div class="btn left-btn"></div>
+		<ul class="picture-list">
+			<li class="picture-item"><a href=""><img src="images/1.jpg" width="100%" height="100%" alt=""></a></li>
+			<li class="picture-item"><a href=""><img src="images/1.jpg" width="100%" height="100%" alt=""></a></li>
+			<li class="picture-item"><a href=""><img src="images/1.jpg" width="100%" height="100%" alt=""></a></li>
+			<li class="picture-item"><a href=""><img src="images/1.jpg" width="100%" height="100%" alt=""></a></li>
+			<li class="picture-item"><a href=""><img src="images/1.jpg" width="100%" height="100%" alt=""></a></li>
+			<li class="picture-item"><a href=""><img src="images/1.jpg" width="100%" height="100%" alt=""></a></li>
+			<li class="picture-item"><a href=""><img src="images/1.jpg" width="100%" height="100%" alt=""></a></li>
+			<li class="picture-item"><a href=""><img src="images/1.jpg" width="100%" height="100%" alt=""></a></li>
+			<li class="picture-item"><a href=""><img src="images/1.jpg" width="100%" height="100%" alt=""></a></li>
+		</ul>
+		<div class="btn right-btn"></div>
+	</div>
+	<div class="J_picture-container picture-container" data-setting='{    
+	"width":1000,
+			"heght":500,
+			"picturewidth":800,
+			"pictureheight":500,
+			"type":"bottom",
+			"speed":2000,
+			"percent":0.9
+	}'><!-- J_picture-container为用js操作的类名，data-setting为给旋转木马配置的参数(其中type为对齐方式，persent为过渡的百分比)
+ -->		<div class="btn left-btn"></div>
+		<ul class="picture-list">
+
+			<li class="picture-item"><a href=""><img src="images/1.jpg" width="100%" height="100%" alt=""></a></li>
+			<li class="picture-item"><a href=""><img src="images/1.jpg" width="100%" height="100%" alt=""></a></li>
+			<li class="picture-item"><a href=""><img src="images/1.jpg" width="100%" height="100%" alt=""></a></li>
+			<li class="picture-item"><a href=""><img src="images/1.jpg" width="100%" height="100%" alt=""></a></li>
+			<li class="picture-item"><a href=""><img src="images/1.jpg" width="100%" height="100%" alt=""></a></li>
+			<li class="picture-item"><a href=""><img src="images/1.jpg" width="100%" height="100%" alt=""></a></li>
+			<li class="picture-item"><a href=""><img src="images/1.jpg" width="100%" height="100%" alt=""></a></li>
+			<li class="picture-item"><a href=""><img src="images/1.jpg" width="100%" height="100%" alt=""></a></li>
+		</ul>
+		<div class="btn right-btn"></div>
+	</div>
+	<script>
+
+	$(function(){
+		Carousel.init($(".J_picture-container"));
+	 });//将含有"J_picture-container"类名的div以集合的形式传入，便于操作
+
+
+	</script>
+</body>
+</html>
