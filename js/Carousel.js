@@ -1,5 +1,5 @@
 ;(function($){
-	var Carousel=function(pictures){
+	var Carousel=function(pictures){//对于同一个接口，用new object（）创建对象户产生大量重复代码，所以选用构造函数模式，用构造函数创建对象，函数名开头需大写，用以区分其他函数（也不是必要），说是构造函数其实就是有着和其它函数调用方式不同的唯一区别，但使用构造函数定义对象有着它的缺点，即会构造函数的每一个创建方法，但也可以把方法写到全局作用域里，但这样会让大码没有丝毫封装性可言，所以选用与原型模式结合。
 		var self=this;
 		// 保存单个旋转木马对象
 		this.pictures=pictures;
@@ -27,7 +27,7 @@
 			"picturewidth":800,
 			"pictureheight":500,
 			"type":"mid",//top,botttom
-			"speed":500,//切换速度
+			"speed":500,//切换速度@
 			"autoPlay":true,//是否执行自动播放
 			"delay":1000,//自动播放速度
 			"percent":0.9//后面帧与前面帧的比例关系
@@ -65,8 +65,8 @@
 										});
 		}
 	};
-	Carousel.prototype={
-		//自动播放效果
+	Carousel.prototype={//构造函数模式与原型模式相结合
+	//自动播放效果
 		autoPlay:function(){
 		var self=this;//保存this防止this漂移
 		this.timer=window.setInterval(function(){
@@ -196,7 +196,7 @@
 				});
 			});
 			//设置左边帧的css属性
-			var lw=sliceRightPictures.last().width(),
+			var lw=liceRightPictures.last().width(),s
 			 lh=sliceRightPictures.last().height(),
 			 oloop = Math.floor(this.picturesItems.size()/2);
 			sliceLeftPictures.each(function(i){
@@ -236,9 +236,10 @@
 		// 获取人工配制的参数
 		getSetting:function(){
 			
-			var setting = this.pictures.attr("data-setting");
+			var setting = this.pictures.attr("data-setting");//attr() 方法设置或返回被选元素的属性值。
+
 			if(setting&&setting!=""){
-				return $.parseJSON(setting);
+				return $.parseJSON(setting);//返回JSON对象，json里的数据是key：value，它们必须用双引号。
 			}else{
 				return {};
 			};
@@ -255,3 +256,7 @@
 	//全局声明
 	window["Carousel"]=Carousel;
 })(jQuery);
+//(function(){　})(jQuery)定义并立即调用匿名函数
+//相当于var someFunction=function(){};
+//someFonction();
+//将someFunction用function(){}替换（需要加上括号）。
